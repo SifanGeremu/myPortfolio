@@ -1,0 +1,6 @@
+Avery Quinn
+Product Engineer
+hello@example.com
+Lisbon, Portugal
+
+This is a placeholder resume. Replace this file and the fields in data/content.ts.

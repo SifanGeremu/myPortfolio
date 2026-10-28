@@ -80,28 +80,63 @@ function Menu({
   );
 }
 
+function SideNav({ active, onNavigate }: { active: string; onNavigate: (href: string) => void }) {
+  return (
+    <nav
+      aria-label="Sections"
+      className="fixed top-40 z-20 hidden flex-col gap-3 min-[1100px]:flex left-[max(1rem,calc(50vw-350px-11.5rem))]"
+    >
+      {content.nav.side.map((link, index) => {
+        const current = active === link.href.slice(1);
+        return (
+          <a
+            key={link.href}
+            href={link.href}
+            aria-current={current ? "location" : undefined}
+            onClick={() => onNavigate(link.href)}
+            className={`relative inline-flex min-h-8 items-center gap-2 text-[13px] leading-none ${
+              current ? "text-accent" : "text-faint hover:text-fg"
+            }`}
+          >
+            <span
+              aria-hidden="true"
+              className={`absolute -left-3 h-3.5 w-0.5 rounded-full ${current ? "bg-accent" : "bg-transparent"}`}
+            />
+            <span className="w-5 tabular-nums text-[11px]">{String(index + 1).padStart(2, "0")}</span>
+            {link.label}
+          </a>
+        );
+      })}
+    </nav>
+  );
+}
+
 function Shell({ children }: { children: React.ReactNode }) {
   const { theme, toggle } = useTheme();
   const [active, setActive] = useState("top");
 
   useEffect(() => {
-    const ids = content.nav.primary.map((link) => link.href.slice(1));
-    const elements = ids
-      .map((id) => document.getElementById(id))
-      .filter((element): element is HTMLElement => element !== null);
+    const ids = [...new Set([...content.nav.primary, ...content.nav.side].map((link) => link.href.slice(1)))];
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible?.target.id) setActive(visible.target.id);
-      },
-      { rootMargin: "-35% 0px -50% 0px", threshold: [0.15, 0.4, 0.7] },
-    );
+    function onScroll() {
+      const line = window.scrollY + 140;
+      let current = "top";
+      let best = -1;
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (top <= line && top >= best) {
+          best = top;
+          current = id;
+        }
+      }
+      setActive(current);
+    }
 
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   function activate(href: string) {
@@ -109,13 +144,14 @@ function Shell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-bg px-3 text-fg sm:px-6">
+    <div className="page min-h-screen px-3 text-fg sm:px-6">
       <a
         href="#top"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-fg focus:px-3 focus:py-2 focus:text-sm focus:text-bg"
       >
         {content.ui.skip}
       </a>
+      <SideNav active={active} onNavigate={activate} />
       <div className="relative mx-auto min-h-screen w-full min-w-0 max-w-[700px] overflow-x-clip">
         <div className="rule-y pointer-events-none absolute inset-y-0 left-0" aria-hidden="true" />
         <div className="rule-y pointer-events-none absolute inset-y-0 right-0" aria-hidden="true" />

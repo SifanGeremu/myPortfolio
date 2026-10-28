@@ -89,6 +89,15 @@ export const content = {
     more: [
       { label: "About", href: "#about" },
       { label: "Contact", href: "#contact" },
+      { label: "Activity", href: "#activity" },
+      { label: "Highlights", href: "#highlights" },
+    ],
+    side: [
+      { label: "About", href: "#about" },
+      { label: "Contact", href: "#contact" },
+      { label: "Projects", href: "#projects" },
+      { label: "Tech Stack", href: "#stack" },
+      { label: "Activity", href: "#activity" },
       { label: "Highlights", href: "#highlights" },
     ],
   },

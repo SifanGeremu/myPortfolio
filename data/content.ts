@@ -67,7 +67,7 @@ export const content = {
   email: "hello@example.com",
   banner: {
     src: "/images/banner.svg",
-    alt: "Abstract dusk ridgeline in olive and stone",
+    alt: "Abstract morning ridgeline under a pale sky",
   },
   avatar: {
     src: "/images/avatar.svg",

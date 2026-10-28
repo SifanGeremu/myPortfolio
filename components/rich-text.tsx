@@ -6,7 +6,7 @@ export function RichText({ text, marks }: { text: string; marks: readonly string
     <>
       {parts.map((part, index) =>
         part.mark ? (
-          <span key={index} className="text-fg underline decoration-fg/80 underline-offset-[3px]">
+          <span key={index} className="text-fg underline decoration-accent/70 underline-offset-[3px]">
             {part.text}
           </span>
         ) : (

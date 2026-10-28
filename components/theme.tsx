@@ -7,7 +7,7 @@ export type ThemeName = "dark" | "light";
 const ThemeContext = createContext<{ theme: ThemeName; toggle: () => void } | null>(null);
 
 function readTheme(): ThemeName {
-  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }
 
 function subscribe(onStoreChange: () => void) {
@@ -16,11 +16,11 @@ function subscribe(onStoreChange: () => void) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const theme = useSyncExternalStore(subscribe, readTheme, () => "dark" as ThemeName);
+  const theme = useSyncExternalStore(subscribe, readTheme, () => "light" as ThemeName);
 
   function toggle() {
-    const next: ThemeName = theme === "dark" ? "light" : "dark";
-    if (next === "light") document.documentElement.dataset.theme = "light";
+    const next: ThemeName = theme === "light" ? "dark" : "light";
+    if (next === "dark") document.documentElement.dataset.theme = "dark";
     else delete document.documentElement.dataset.theme;
     localStorage.setItem("theme", next);
     window.dispatchEvent(new Event("themechange"));

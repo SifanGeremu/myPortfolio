@@ -4,16 +4,18 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useId, useRef, useState } from "react";
 import { content } from "@/data/content";
 import { Icon } from "@/components/icons";
-import { ThemeProvider, useTheme } from "@/components/theme";
+import { ThemeProvider } from "@/components/theme";
 
-function Menu({
+export function Menu({
   label,
   links,
   onNavigate,
+  buttonClassName = "",
 }: {
   label: string;
   links: readonly { label: string; href: string }[];
   onNavigate: (href: string) => void;
+  buttonClassName?: string;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -40,7 +42,7 @@ function Menu({
     <div className="relative" ref={ref}>
       <button
         type="button"
-        className="inline-flex min-h-10 items-center gap-1 rounded-full px-1 text-[13px] text-muted hover:text-fg"
+        className={`inline-flex min-h-10 items-center gap-1 rounded-full px-1 text-[13px] text-muted hover:text-fg ${buttonClassName}`}
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => setOpen((value) => !value)}
@@ -112,7 +114,6 @@ function SideNav({ active, onNavigate }: { active: string; onNavigate: (href: st
 }
 
 function Shell({ children }: { children: React.ReactNode }) {
-  const { theme, toggle } = useTheme();
   const [active, setActive] = useState("top");
 
   useEffect(() => {
@@ -152,51 +153,7 @@ function Shell({ children }: { children: React.ReactNode }) {
         {content.ui.skip}
       </a>
       <SideNav active={active} onNavigate={activate} />
-      <div className="relative mx-auto min-h-screen w-full min-w-0 max-w-[700px] overflow-x-clip">
-        <div className="rule-y pointer-events-none absolute inset-y-0 left-0" aria-hidden="true" />
-        <div className="rule-y pointer-events-none absolute inset-y-0 right-0" aria-hidden="true" />
-        <header className="relative z-10 flex items-center gap-3 px-4 py-3 sm:px-5">
-          <a href="#top" className="font-serif text-[1.35rem] leading-none text-fg" onClick={() => activate("#top")}>
-            {content.brand}
-          </a>
-          <nav className="ml-auto flex items-center gap-1" aria-label="Primary">
-            <div className="hidden items-center gap-3 min-[480px]:flex">
-              {content.nav.primary.map((link) => {
-                const id = link.href.slice(1);
-                const current = active === id;
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    aria-current={current ? "location" : undefined}
-                    className={`inline-flex min-h-10 items-center text-[13px] ${current ? "text-fg" : "text-muted hover:text-fg"}`}
-                    onClick={() => activate(link.href)}
-                  >
-                    {link.label}
-                  </a>
-                );
-              })}
-              <Menu label={content.nav.moreLabel} links={content.nav.more} onNavigate={activate} />
-            </div>
-            <div className="min-[480px]:hidden">
-              <Menu
-                label={content.ui.menu}
-                links={[...content.nav.primary, ...content.nav.more]}
-                onNavigate={activate}
-              />
-            </div>
-            <button
-              type="button"
-              className="inline-flex size-10 items-center justify-center rounded-full text-muted hover:bg-fill hover:text-fg"
-              aria-label={theme === "dark" ? content.ui.themeToLight : content.ui.themeToDark}
-              onClick={toggle}
-              suppressHydrationWarning
-            >
-              <Icon name={theme === "dark" ? "sun" : "moon"} className="size-4" />
-            </button>
-          </nav>
-        </header>
-        <div className="rule-x" aria-hidden="true" />
+      <div className="relative mx-auto min-h-screen w-full min-w-0 max-w-[700px]">
         <main>{children}</main>
       </div>
     </div>

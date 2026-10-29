@@ -14,7 +14,7 @@ const GitHubCalendar = dynamic(
 );
 
 const calendarTheme = {
-  light: ["#e8f1ff", "#d0e5ff", "#93c2ff", "#54a0ff", "#2f80ed"],
+  light: ["#ffffff", "#d7e6f6", "#9ec2e6", "#679fde", "#307de5"],
   dark: ["#1a1d24", "#1d3354", "#2c5ea8", "#5b93e0", "#9ec4f4"],
 };
 

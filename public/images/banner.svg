@@ -1,18 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" fill="none">
-  <rect width="1200" height="500" fill="#8ebfe4"/>
-  <rect width="1200" height="250" fill="#c5dff4"/>
-  <ellipse cx="220" cy="92" rx="96" ry="28" fill="#ffffff" opacity="0.42"/>
-  <ellipse cx="300" cy="80" rx="72" ry="22" fill="#ffffff" opacity="0.32"/>
-  <ellipse cx="610" cy="68" rx="118" ry="26" fill="#ffffff" opacity="0.26"/>
-  <ellipse cx="1040" cy="108" rx="80" ry="20" fill="#ffffff" opacity="0.22"/>
-  <circle cx="910" cy="104" r="78" fill="#fff7e6" opacity="0.34"/>
-  <circle cx="910" cy="104" r="40" fill="#fff3d2"/>
-  <path d="M0 250L150 176L310 236L490 140L700 228L870 156L1060 220L1200 168V500H0V250Z" fill="#6fa3c8"/>
-  <path d="M0 330L210 246L430 318L660 214L900 304L1200 236V500H0V330Z" fill="#95bdd6"/>
-  <path d="M0 400L250 332L520 392L800 318L1200 378V500H0V400Z" fill="#c5dceb"/>
-  <path d="M0 456L340 418L740 452L1200 400V500H0V456Z" fill="#eef4f8"/>
-  <rect x="168" y="292" width="5" height="26" fill="#3d5f78"/>
-  <circle cx="170.5" cy="284" r="14" fill="#4d7390"/>
-  <rect x="760" y="268" width="5" height="22" fill="#3d5f78"/>
-  <circle cx="762.5" cy="262" r="12" fill="#557a96"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6aadec"/>
+      <stop offset="48%" stop-color="#9ec8ef"/>
+      <stop offset="100%" stop-color="#d7ebfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="360" fill="url(#sky)"/>
+  <g fill="#fff">
+    <ellipse cx="160" cy="118" rx="150" ry="42" opacity="0.42"/>
+    <ellipse cx="270" cy="98" rx="120" ry="36" opacity="0.78"/>
+    <ellipse cx="360" cy="124" rx="90" ry="28" opacity="0.55"/>
+    <ellipse cx="620" cy="86" rx="190" ry="46" opacity="0.38"/>
+    <ellipse cx="760" cy="112" rx="150" ry="40" opacity="0.82"/>
+    <ellipse cx="880" cy="88" rx="110" ry="32" opacity="0.6"/>
+    <ellipse cx="1120" cy="130" rx="180" ry="44" opacity="0.4"/>
+    <ellipse cx="1240" cy="104" rx="120" ry="34" opacity="0.7"/>
+    <ellipse cx="480" cy="160" rx="160" ry="30" opacity="0.28"/>
+    <ellipse cx="980" cy="168" rx="140" ry="26" opacity="0.22"/>
+  </g>
 </svg>

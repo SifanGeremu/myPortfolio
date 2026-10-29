@@ -26,6 +26,7 @@ export function Projects() {
       aside={
         <a
           href={content.projects.viewAll.href}
+          {...newTabProps(content.projects.viewAll.href)}
           className="inline-flex items-center gap-1 pb-1 text-[13px] text-muted hover:text-fg"
         >
           {content.projects.viewAll.label}
@@ -75,7 +76,9 @@ export function Projects() {
                   ))}
                 </ul>
                 <div className="ml-auto flex gap-1.5">
-                  <IconLink href={project.href} icon="globe" label={`${project.title} ${content.projects.siteLabel}`} />
+                  {project.live ? (
+                    <IconLink href={project.href} icon="globe" label={`${project.title} ${content.projects.siteLabel}`} />
+                  ) : null}
                   {project.repo ? (
                     <IconLink
                       href={project.repo}

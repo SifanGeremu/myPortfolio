@@ -16,7 +16,7 @@ function subscribe(onStoreChange: () => void) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const theme = useSyncExternalStore(subscribe, readTheme, () => "light" as ThemeName);
+  const theme = useSyncExternalStore(subscribe, readTheme, () => "dark" as ThemeName);
 
   function toggle() {
     const next: ThemeName = theme === "light" ? "dark" : "light";

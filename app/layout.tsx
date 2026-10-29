@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   description: content.summary,
 };
 
-const themeScript = `try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}`;
+const themeScript = `try{if(localStorage.getItem("theme")==="light")document.documentElement.removeAttribute("data-theme")}catch(e){}`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${serif.variable} ${mono.variable} h-full antialiased`}>
+    <html lang="en" data-theme="dark" suppressHydrationWarning className={`${serif.variable} ${mono.variable} h-full antialiased`}>
       <body className="min-h-full bg-bg text-fg">
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {children}

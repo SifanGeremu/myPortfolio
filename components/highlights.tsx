@@ -49,7 +49,7 @@ export function Highlights() {
                   <p className="truncate text-xs text-faint">{item.handle}</p>
                 </div>
               </div>
-              <blockquote className="mt-3 text-sm leading-relaxed text-muted">“{item.quote}”</blockquote>
+              <p className="mt-3 text-sm leading-relaxed text-muted">{item.quote}</p>
             </motion.article>
           ))}
         </AnimatePresence>

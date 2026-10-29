@@ -6,7 +6,7 @@ import { newTabProps } from "@/lib/links";
 export function Contact() {
   return (
     <Section id="contact" title={content.contact.title}>
-      <ul className="grid grid-cols-2 gap-2 min-[560px]:grid-cols-5">
+      <ul className="grid grid-cols-2 gap-2 min-[560px]:grid-cols-3">
         {content.contact.links.map((link) => (
           <li key={link.label}>
             <a

@@ -1,6 +1,58 @@
-Avery Quinn
-Product Engineer
-hello@example.com
-Lisbon, Portugal
+Sifan Geremu
+Backend Engineer
+Addis Ababa, Ethiopia
+https://www.linkedin.com/in/sifan-geremu
+https://github.com/SifanGeremu
 
-This is a placeholder resume. Replace this file and the fields in data/content.ts.
+Backend engineer. APIs in TypeScript and PHP, schemas that stay readable, and a UI only when it has to tell the truth about the API. BSc Computer Science, Haramaya University, 2026. Open to work.
+
+Experience
+
+Backend Developer, Zion Software Agency — Addis Ababa
+Feb 2026 – May 2026
+Backend engineering for a software studio.
+
+Campus Ambassador, Gebeya — Haramaya University
+Feb 2026 – Apr 2026
+Ambassador for Gebeya Dala Studio. Product expert and community judge at CANEX Create-thon 2026, one of 40 ambassadors supporting 6,000+ creators across Africa.
+
+Backend Engineer, Intern, TenaMart — Addis Ababa
+Sep 2025 – Jan 2026
+Backend on a live medicine marketplace. Joined an existing codebase: APIs, data handling, and logic written so someone else could keep it running.
+
+Backend Engineering Intern, Kuraztech — Addis Ababa
+Jul 2025 – Jan 2026
+Selected from 1,200 applicants. Laravel, Postgres, secure APIs, and work with frontend and design.
+
+Full-stack Developer, Ethiopian Space Science Society
+Jul 2025 – Sep 2025
+Short full-stack engagement on web software for the society.
+
+Education
+
+BSc Computer Science, Haramaya University
+2022 – 2026
+
+Selected projects
+
+StackStep — A stack prompt becomes a phased build plan. React, Express, MongoDB, JWT, server-side LLM.
+https://stack-step.vercel.app
+https://github.com/SifanGeremu/StackStep
+
+CodeBattle — Real-time coding duels. React, Express, Socket.IO, SQLite, Monaco, GitHub login.
+https://codebattle-two.vercel.app
+https://github.com/SifanGeremu/codebattle
+
+LMS — Catalog, enrollment, and draft-to-publish. Laravel Sanctum, roles, React.
+https://github.com/SifanGeremu/lms-system
+
+Budget tracker — Income, expenses, monthly budgets. Laravel and React. Built during the Kuraztech internship.
+https://personal-budget-tracker-seven-teal.vercel.app
+https://github.com/SifanGeremu/personal-budget-tracker
+
+TeamFlow API — Task updates over Socket.IO, JWT, and role checks, with raw SQL on MySQL.
+https://github.com/SifanGeremu/teamflow-backend
+
+Also
+
+East Ethiopia Cursor Hackathon, with HUCISA and the Ethiopian Cursor Community, 2026.

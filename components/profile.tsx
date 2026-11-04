@@ -57,7 +57,7 @@ export function Profile() {
             height={360}
             priority
             unoptimized
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-[center_30%]"
           />
           <nav
             aria-label="Primary"
@@ -135,7 +135,7 @@ export function Profile() {
           width={160}
           height={160}
           unoptimized
-          className="size-[72px] shrink-0 rounded-[18px] border border-[#ececee] object-cover object-[72%_42%]"
+          className="size-[72px] shrink-0 rounded-[18px] border border-[#ececee] object-cover object-center"
         />
         <div className="flex min-w-0 flex-1 items-start justify-between gap-3">
           <div className="min-w-0">

@@ -32,7 +32,7 @@ export type IconName =
   | "workflow"
   | "triangle";
 
-export const stackTabs = ["All", "Frontend", "Backend", "Design", "Tools"] as const;
+export const stackTabs = ["All", "Frontend", "Backend", "AI", "Tools"] as const;
 export type StackTab = (typeof stackTabs)[number];
 export type SkillGroup = Exclude<StackTab, "All">;
 
@@ -58,16 +58,16 @@ export type Project = {
 export const content = {
   name: "Sifan Geremu",
   brand: "Sifan",
-  role: "Backend Engineer",
+  role: "Software Engineer",
   location: "Addis Ababa, Ethiopia",
   status: "Open to work",
   summary:
-    "Sifan Geremu is a backend engineer in Addis Ababa. He builds APIs with TypeScript and Laravel, and React when the product needs a face.",
+    "Sifan Geremu is a software engineer in Addis Ababa. Backend APIs in TypeScript, NestJS, and Laravel, with LLM features built on the server.",
   banner: {
-    src: "/images/banner.svg",
-    alt: "Blue sky with soft white clouds",
+    src: "/images/banner.jpg",
+    alt: "Addis Ababa skyline at sunset",
   },
-  headline: "I build backends that stay clear after the demo.",
+  headline: "I engineer the engine room.",
   player: {
     title: "Quiet hours",
     artist: "Addis Ababa",
@@ -76,8 +76,8 @@ export const content = {
   },
   pronounce: "Hear the name pronounced",
   avatar: {
-    src: "/images/sifan.jpg",
-    alt: "Sifan Geremu at a desk",
+    src: "/images/sifan-portrait.jpg",
+    alt: "Portrait of Sifan Geremu",
   },
   ui: {
     skip: "Skip to content",
@@ -111,16 +111,16 @@ export const content = {
     title: "About",
     items: [
       {
-        text: "I'm a backend engineer in Addis Ababa. Computer Science, Haramaya University, class of 2026. Most of my time goes to APIs, schemas, and who is allowed to touch them.",
-        marks: ["backend engineer", "Haramaya University"],
+        text: "I'm a Backend Software Engineer based in Addis Ababa, Ethiopia, with a Computer Science background from Haramaya University (2026). I've worked on production applications, built APIs, designed database schemas, and developed backend systems using Laravel, Node.js, and PostgreSQL.",
+        marks: ["Backend Software Engineer"],
       },
       {
-        text: "TenaMart was a live medicine marketplace. I worked in the existing codebase and left APIs someone else could keep running. Kuraztech hired me from 1,200 applicants for six months on Laravel and Postgres.",
-        marks: ["TenaMart", "Kuraztech", "Laravel", "Postgres"],
+        text: "I care about clean architecture, maintainable code, reliable APIs, and building systems that solve real problems. I'm also interested in AI engineering, particularly integrating LLMs and exploring RAG to build practical AI-powered applications.",
+        marks: ["AI engineering"],
       },
       {
-        text: "After the internships I spent three months as a backend developer at Zion Software Agency. When a product needs a face, I build it in React and Next.js. StackStep is the recent one: an LLM plans the phases, and you learn the stack by shipping them.",
-        marks: ["Zion Software Agency", "React", "Next.js", "StackStep"],
+        text: "Recently, I've been working across backend development and AI integration, focusing on building reliable systems where AI capabilities are part of the architecture, not just another feature on the interface.",
+        marks: [] as string[],
       },
     ],
   },
@@ -143,12 +143,12 @@ export const content = {
         title: "StackStep",
         tagline: "Learn a stack by shipping it.",
         description:
-          "A prompt like MERN becomes a phased roadmap: projects, tasks, and a definition of done. Accounts, JWT, and the LLM planner sit on the server.",
-        image: "/images/fieldnote.svg",
-        imageAlt: "Abstract panel in sage and paper",
+          "A prompt like MERN becomes phases, tasks, and a definition of done. The LLM API runs in Express, behind JWT. The browser receives the plan, never the model.",
+        image: "/images/stackstep.jpg",
+        imageAlt: "StackStep homepage with a MERN roadmap",
         live: true,
         flag: "LLM",
-        tags: ["React", "Express", "MongoDB"],
+        tags: ["Express", "JWT", "LLM"],
         href: "https://stack-step.vercel.app",
         repo: "https://github.com/SifanGeremu/StackStep",
       },
@@ -208,8 +208,9 @@ export const content = {
       { name: "Postgres", group: "Backend", icon: "database" },
       { name: "MySQL", group: "Backend", icon: "cylinder" },
       { name: "MongoDB", group: "Backend", icon: "database" },
-      { name: "Motion", group: "Design", icon: "sparkles" },
-      { name: "UI", group: "Design", icon: "layers" },
+      { name: "Python", group: "AI", icon: "braces" },
+      { name: "LLM APIs", group: "AI", icon: "sparkles" },
+      { name: "RAG", group: "AI", icon: "workflow" },
       { name: "Git", group: "Tools", icon: "git" },
       { name: "GitHub", group: "Tools", icon: "github" },
       { name: "Docker", group: "Tools", icon: "boxes" },
@@ -256,8 +257,8 @@ export const content = {
     ],
   },
   footer: {
-    title: "If the API has to last",
-    body: "I take backend work where the schema, the permissions, and the next engineer all matter.",
+    title: "Backend roles, including the AI ones",
+    body: "I build APIs that stay clear after the demo, and I put the model behind them when the product needs it.",
     cta: "Let's talk",
     href: "https://www.linkedin.com/in/sifan-geremu",
   },

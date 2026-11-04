@@ -1,10 +1,10 @@
 Sifan Geremu
-Backend Engineer
+Software Engineer, Backend
 Addis Ababa, Ethiopia
 https://www.linkedin.com/in/sifan-geremu
 https://github.com/SifanGeremu
 
-Backend engineer. APIs in TypeScript and PHP, schemas that stay readable, and a UI only when it has to tell the truth about the API. BSc Computer Science, Haramaya University, 2026. Open to work.
+Software engineer, backend first. APIs in TypeScript, NestJS, and Laravel. LLM features live in the service layer, behind auth, next to the schema. BSc Computer Science, Haramaya University, 2026. Open to work.
 
 Experience
 
@@ -35,7 +35,7 @@ BSc Computer Science, Haramaya University
 
 Selected projects
 
-StackStep — A stack prompt becomes a phased build plan. React, Express, MongoDB, JWT, server-side LLM.
+StackStep — A stack prompt becomes a phased build plan. Express, MongoDB, JWT. The LLM API runs on the server. The browser receives the plan, never the model.
 https://stack-step.vercel.app
 https://github.com/SifanGeremu/StackStep
 

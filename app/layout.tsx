@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   authors: [{ name: content.name, url: "https://www.linkedin.com/in/sifan-geremu" }],
   creator: content.name,
   alternates: { canonical: "/" },
+  verification: { google: "toyEMI5hQzdzLTUlQQmsFBTUPr4_noUjs6O8UjooL5o" },
   robots: allowIndexing()
     ? { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } }
     : { index: false, follow: false },

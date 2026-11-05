@@ -7,7 +7,7 @@ import { content } from "@/data/content";
 import { Menu } from "@/components/frame";
 import { Icon } from "@/components/icons";
 import { useTheme } from "@/components/theme";
-import { newTabProps } from "@/lib/links";
+import { SiteLink } from "@/components/resume-view";
 
 export function Profile() {
   const { theme, toggle } = useTheme();
@@ -167,14 +167,13 @@ export function Profile() {
       <ul className="mt-4 flex flex-wrap items-center justify-center gap-2 px-2">
         {content.contact.links.map((link) => (
           <li key={link.label}>
-            <a
+            <SiteLink
               href={link.href}
-              {...newTabProps(link.href)}
               className="hero-pill inline-flex min-h-9 items-center gap-1.5 rounded-full px-3 text-[13px]"
             >
               <Icon name={link.icon} className="size-3.5" />
               {link.label}
-            </a>
+            </SiteLink>
           </li>
         ))}
       </ul>

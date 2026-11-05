@@ -42,10 +42,10 @@ export function Highlights() {
                   width={64}
                   height={64}
                   unoptimized
-                  className="size-8 rounded-full object-cover"
+                  className="size-10 shrink-0 rounded-lg bg-white object-contain p-1"
                 />
                 <div className="min-w-0">
-                  <h3 className="truncate text-sm text-fg">{item.name}</h3>
+                  <h3 className="text-sm leading-tight text-fg">{item.name}</h3>
                   <p className="truncate text-xs text-faint">{item.handle}</p>
                 </div>
               </div>

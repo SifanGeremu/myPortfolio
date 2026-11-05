@@ -75,6 +75,9 @@ export const content = {
     pause: "Pause music",
   },
   pronounce: "Hear the name pronounced",
+  resume: {
+    src: "/resume.pdf",
+  },
   avatar: {
     src: "/images/sifan-portrait.jpg",
     alt: "Portrait of Sifan Geremu",
@@ -111,7 +114,7 @@ export const content = {
     title: "About",
     items: [
       {
-        text: "I'm a Backend Software Engineer based in Addis Ababa, Ethiopia, with a Computer Science background from Haramaya University (2026). I've worked on production applications, built APIs, designed database schemas, and developed backend systems using Laravel, Node.js, and PostgreSQL.",
+        text: "I'm a Backend Software Engineer based in Addis Ababa, Ethiopia, with a Computer Science background from Haramaya University (2026). I've worked on production applications, built APIs, designed database schemas, and developed backend systems.",
         marks: ["Backend Software Engineer"],
       },
       {
@@ -129,7 +132,8 @@ export const content = {
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/sifan-geremu", icon: "linkedin" as const },
       { label: "GitHub", href: "https://github.com/SifanGeremu", icon: "github" as const },
-      { label: "Resume", href: "/resume.txt", icon: "resume" as const },
+      { label: "Email", href: "mailto:wins33975@gmail.com", icon: "mail" as const },
+      { label: "Resume", href: "/resume.pdf", icon: "resume" as const },
     ],
   },
   projects: {
@@ -157,8 +161,8 @@ export const content = {
         tagline: "Duels, not a pastebin.",
         description:
           "Live coding battles over Socket.IO, Monaco in the editor, GitHub login, and a leaderboard. Express on the API. SQLite underneath.",
-        image: "/images/lumen.svg",
-        imageAlt: "Abstract card on a warm ground",
+        image: "/images/codebattle.svg",
+        imageAlt: "A live coding duel, you ahead of an opponent",
         live: true,
         flag: "Real-time",
         tags: ["React", "Socket.IO", "SQLite"],
@@ -170,8 +174,8 @@ export const content = {
         tagline: "Permissions live on the server.",
         description:
           "Public catalog, enrollment, and an instructor path from draft to publish. Laravel Sanctum and role checks decide what the React UI is allowed to show.",
-        image: "/images/halftone.svg",
-        imageAlt: "Abstract panels on a pink and blue ground",
+        image: "/images/lms.svg",
+        imageAlt: "Who can publish a course: visitor, student, and instructor",
         live: false,
         tags: ["Laravel", "React", "MySQL"],
         href: "https://github.com/SifanGeremu/lms-system",
@@ -182,8 +186,8 @@ export const content = {
         tagline: "Income, spend, and the month.",
         description:
           "Built during the Kuraztech internship. Laravel on the API, React on the dashboard: income, expenses, monthly budgets, and where the money went.",
-        image: "/images/kepler.svg",
-        imageAlt: "Abstract chart on a dark panel",
+        image: "/images/budget.svg",
+        imageAlt: "A monthly ledger of income, spending, and what is left",
         live: true,
         tags: ["Laravel", "React", "MySQL"],
         href: "https://personal-budget-tracker-seven-teal.vercel.app",
@@ -236,14 +240,14 @@ export const content = {
         handle: "Sep 2025 – Jan 2026",
         quote:
           "Backend internship on a live medicine marketplace. APIs and data handling inside a codebase that already had users.",
-        avatar: "/images/note-mina.svg",
+        avatar: "/images/tenamart.png",
         avatarAlt: "",
       },
       {
         name: "Kuraztech",
         handle: "1 of 1,200",
         quote: "Six months on Laravel and Postgres. Secure APIs, then the handoff to frontend and design.",
-        avatar: "/images/note-luis.svg",
+        avatar: "/images/kuraz.png",
         avatarAlt: "",
       },
       {
@@ -251,15 +255,24 @@ export const content = {
         handle: "CANEX 2026",
         quote:
           "Campus ambassador for Dala Studio, then product expert and judge at CANEX Create-thon. One of 40 ambassadors, 6,000+ creators across Africa.",
-        avatar: "/images/note-noor.svg",
+        avatar: "/images/gebeya.png",
+        avatarAlt: "",
+      },
+      {
+        name: "Zion Software Agency",
+        handle: "Feb 2026 – May 2026",
+        quote: "Part-time backend. REST APIs for client applications, shipped with the agency team.",
+        avatar: "/images/zion.png",
         avatarAlt: "",
       },
     ],
   },
   footer: {
-    title: "Backend roles, including the AI ones",
-    body: "I build APIs that stay clear after the demo, and I put the model behind them when the product needs it.",
-    cta: "Let's talk",
-    href: "https://www.linkedin.com/in/sifan-geremu",
+    title: "Reach me",
+    body: "Backend roles, including the ones with a model behind the API.",
+    links: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/sifan-geremu", icon: "linkedin" as const },
+      { label: "wins33975@gmail.com", href: "mailto:wins33975@gmail.com", icon: "mail" as const },
+    ],
   },
 };

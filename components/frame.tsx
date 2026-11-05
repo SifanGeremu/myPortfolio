@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useId, useRef, useState } from "react";
 import { content } from "@/data/content";
 import { Icon } from "@/components/icons";
+import { ResumeProvider } from "@/components/resume-view";
 import { ThemeProvider } from "@/components/theme";
 
 export function Menu({
@@ -163,7 +164,9 @@ function Shell({ children }: { children: React.ReactNode }) {
 export function Frame({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
-      <Shell>{children}</Shell>
+      <ResumeProvider>
+        <Shell>{children}</Shell>
+      </ResumeProvider>
     </ThemeProvider>
   );
 }

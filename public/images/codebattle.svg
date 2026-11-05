@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#12141a"/>
+  <text x="48" y="78" fill="#8b909a" font-family="ui-monospace, monospace" font-size="18">live duel</text>
+  <text x="48" y="168" fill="#f3f4f6" font-family="Georgia, serif" font-size="64">You</text>
+  <text x="430" y="168" fill="#7aaeff" font-family="ui-monospace, monospace" font-size="40">ahead</text>
+  <rect x="48" y="196" width="520" height="10" rx="5" fill="#2a3142"/>
+  <rect x="48" y="196" width="430" height="10" rx="5" fill="#7aaeff"/>
+  <text x="48" y="292" fill="#f3f4f6" font-family="Georgia, serif" font-size="64">Opp</text>
+  <text x="430" y="292" fill="#f3f4f6" font-family="ui-monospace, monospace" font-size="40">behind</text>
+  <rect x="48" y="320" width="520" height="10" rx="5" fill="#2a3142"/>
+  <rect x="48" y="320" width="318" height="10" rx="5" fill="#f3f4f6"/>
+  <text x="48" y="430" fill="#8b909a" font-family="ui-monospace, monospace" font-size="20">socket.io / monaco / sqlite</text>
+</svg>

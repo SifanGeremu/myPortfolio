@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#17211c"/>
+  <text x="48" y="78" fill="#8fbfa8" font-family="ui-monospace, monospace" font-size="18">March</text>
+  <text x="48" y="170" fill="#d7efe4" font-family="Georgia, serif" font-size="56">Income</text>
+  <text x="48" y="260" fill="#d7efe4" font-family="Georgia, serif" font-size="56">Spent</text>
+  <rect x="48" y="300" width="704" height="1" fill="#d7efe4" opacity="0.25"/>
+  <text x="48" y="390" fill="#7dcea0" font-family="Georgia, serif" font-size="64">Left</text>
+  <text x="48" y="440" fill="#8fbfa8" font-family="ui-monospace, monospace" font-size="20">laravel / no bank login</text>
+</svg>

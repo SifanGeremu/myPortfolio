@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f6f3ec"/>
+  <text x="48" y="78" fill="#6b7280" font-family="ui-monospace, monospace" font-size="18">who can publish</text>
+  <text x="48" y="150" fill="#111111" font-family="Georgia, serif" font-size="42">Visitor</text>
+  <text x="520" y="150" fill="#6b7280" font-family="ui-monospace, monospace" font-size="28">catalog</text>
+  <text x="48" y="230" fill="#111111" font-family="Georgia, serif" font-size="42">Student</text>
+  <text x="520" y="230" fill="#6b7280" font-family="ui-monospace, monospace" font-size="28">enroll</text>
+  <text x="48" y="310" fill="#111111" font-family="Georgia, serif" font-size="42">Instructor</text>
+  <text x="430" y="310" fill="#307de5" font-family="ui-monospace, monospace" font-size="28">draft to live</text>
+  <rect x="48" y="360" width="704" height="1" fill="#111111" opacity="0.15"/>
+  <text x="48" y="420" fill="#374151" font-family="ui-monospace, monospace" font-size="20">the server decides. the screen follows.</text>
+</svg>

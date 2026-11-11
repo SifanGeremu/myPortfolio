@@ -12,7 +12,6 @@ import { SiteLink } from "@/components/resume-view";
 export function Profile() {
   const { theme, toggle } = useTheme();
   const [active, setActive] = useState("top");
-  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     const ids = content.nav.primary.map((link) => link.href.slice(1));
@@ -98,37 +97,9 @@ export function Profile() {
             <Icon name={theme === "dark" ? "sun" : "moon"} className="size-4" />
           </button>
         </div>
-        <div className="player absolute bottom-0 left-1/2 z-10 flex w-[min(100%-1.5rem,440px)] -translate-x-1/2 translate-y-1/2 items-center gap-3 rounded-[18px] border border-white/80 px-3 py-2.5">
-          <span className="vinyl size-10 shrink-0 rounded-full" aria-hidden="true" />
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-[13px] font-semibold leading-tight">{content.player.title}</p>
-            <p className="truncate text-[11px] leading-tight text-[#8b919a]">{content.player.artist}</p>
-            <div className="mt-1.5 flex items-center gap-2 text-[10px] tabular-nums text-[#9aa1aa]">
-              <span>0:00</span>
-              <span className="h-[3px] flex-1 rounded-full bg-[#d5e3f1]" />
-              <span>0:00</span>
-            </div>
-          </div>
-          <button
-            type="button"
-            className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-[#1a1a1a] text-white"
-            aria-pressed={playing}
-            aria-label={playing ? content.player.pause : content.player.play}
-            onClick={() => setPlaying((value) => !value)} /* ponytail: no audio file, so this only toggles the icon */
-          >
-            {playing ? (
-              <span className="flex gap-[3px]" aria-hidden="true">
-                <span className="h-2.5 w-[2px] bg-white" />
-                <span className="h-2.5 w-[2px] bg-white" />
-              </span>
-            ) : (
-              <span className="ml-0.5 block border-y-[5px] border-l-[8px] border-y-transparent border-l-white" aria-hidden="true" />
-            )}
-          </button>
-        </div>
       </div>
 
-      <article className="hero-card mx-1 mt-12 flex items-start gap-3.5 rounded-[22px] px-4 py-4 sm:mx-2 sm:gap-4 sm:px-5">
+      <article className="hero-card mx-1 mt-4 flex items-start gap-3.5 rounded-[22px] px-4 py-4 sm:mx-2 sm:gap-4 sm:px-5">
         <Image
           src={content.avatar.src}
           alt={content.avatar.alt}

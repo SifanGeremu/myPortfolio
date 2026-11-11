@@ -68,12 +68,6 @@ export const content = {
     alt: "Addis Ababa skyline at sunset",
   },
   headline: "I engineer the engine room.",
-  player: {
-    title: "Quiet hours",
-    artist: "Addis Ababa",
-    play: "Play music",
-    pause: "Pause music",
-  },
   pronounce: "Hear the name pronounced",
   resume: {
     src: "/resume.pdf",
